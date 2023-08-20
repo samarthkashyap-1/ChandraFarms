@@ -1,19 +1,25 @@
-import Footer from "./components/Footer"
-import Navbar from "./components/Navbar"
-
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home"
+import {Routes, Route } from "react-router-dom";
 
 function App() {
-  
-
   return (
     <>
-      <header><Navbar/></header>
-      <footer>
+      <header>
+        <Navbar />
+      </header>
+<Routes>
+  <Route path="/" element={<Home/>}/>
 
-      <Footer/>
+
+</Routes>
+
+        <footer>
+        <Footer />
       </footer>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
