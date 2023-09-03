@@ -62,7 +62,7 @@ function Navbar() {
         </div>
         <ul
           className={`flex gap-16 text-xl font-bold md:absolute md:w-[100%] md:right-0  md:py-10 md:top-0 md:bg-black md:bg-opacity-90 md:flex-col md:items-center box-border   ${
-            isOpen ? "md:top-0" : "md:-top-[150%]"
+            isOpen ? "md:top-0" : "md:-top-[100%]"
           } md:transition-all md:duration-1000 md:ease-in-out md:shadow}`}
         >
           <div className="md:block hidden">
