@@ -25,7 +25,7 @@ function About() {
             Chandra Farms: A Time-Honored Legacy in Lucknow
           </h1> */}
 
-          <div className="mt-6 grid grid-cols-2 sm:grid-cols-1 gap-8">
+          <div className="mt-6 grid grid-cols-2 md:grid-cols-1 gap-8">
             <div className="relative rounded-xl shadow-2xl overflow-hidden">
               <img src={img3} alt="Chandra Farms" className=" h-full " />
               <p className="absolute inset-0 flex items-center  justify-center text-white text-xl font-bold bg-black bg-opacity-40">

@@ -30,53 +30,53 @@ function Gallery() {
         </header>
       </div>
 
-      <div className="grid grid-cols-4 md:grid-cols-2 gap-4 mx-auto my-20 w-3/4">
+      <div className="grid grid-cols-4 md:grid-cols-2 gap-4 mx-auto my-20 w-3/4 md:w-[90%]">
         <div className="grid gap-0">
           <div className=' object-contain'>
             <img
-              className="h-auto  max-w-full rounded-lg grayscale hover:filter-none hover:scale-105  cursor-pointer transition-all duration-300 ease-in-out"
+              className="h-auto  max-w-full rounded-lg  hover:filter-none hover:scale-105  cursor-pointer transition-all duration-300 ease-in-out"
               src={img1}
               alt=""
             />
           </div>
           <div>
-            <img className="h-auto max-w-full rounded-lg grayscale hover:filter-none hover:scale-105 cursor-pointer transition-all duration-300 ease-in-out" src={img4} alt="" />
+            <img className="h-auto max-w-full rounded-lg  hover:filter-none hover:scale-105 cursor-pointer transition-all duration-300 ease-in-out" src={img4} alt="" />
           </div>
           <div>
-            <img className="h-auto max-w-full rounded-lg grayscale hover:filter-none hover:scale-105 cursor-pointer transition-all duration-300 ease-in-out" src={img3} alt="" />
-          </div>
-        </div>
-        <div className="grid gap-4">
-          <div>
-            <img className="h-auto max-w-full rounded-lg grayscale hover:filter-none hover:scale-105 cursor-pointer transition-all duration-300 ease-in-out" src={img5} alt="" />
-          </div>
-          <div>
-            <img className="h-auto max-w-full rounded-lg grayscale hover:filter-none hover:scale-105 cursor-pointer transition-all duration-300 ease-in-out" src={img2} alt="" />
-          </div>
-          <div>
-            <img className="h-auto max-w-full rounded-lg grayscale hover:filter-none hover:scale-105 cursor-pointer transition-all duration-300 ease-in-out" src={img9} alt="" />
+            <img className="h-auto max-w-full rounded-lg  hover:filter-none hover:scale-105 cursor-pointer transition-all duration-300 ease-in-out" src={img3} alt="" />
           </div>
         </div>
         <div className="grid gap-4">
           <div>
-            <img className="h-auto max-w-full rounded-lg grayscale hover:filter-none hover:scale-105 cursor-pointer transition-all duration-300 ease-in-out" src={img7} alt="" />
+            <img className="h-auto max-w-full rounded-lg  hover:filter-none hover:scale-105 cursor-pointer transition-all duration-300 ease-in-out" src={img5} alt="" />
           </div>
           <div>
-            <img className="h-auto max-w-full rounded-lg grayscale hover:filter-none hover:scale-105 cursor-pointer transition-all duration-300 ease-in-out" src={img8} alt="" />
+            <img className="h-auto max-w-full rounded-lg  hover:filter-none hover:scale-105 cursor-pointer transition-all duration-300 ease-in-out" src={img2} alt="" />
           </div>
           <div>
-            <img className="h-auto max-w-full rounded-lg grayscale hover:filter-none hover:scale-105 cursor-pointer transition-all duration-300 ease-in-out" src={img6} alt="" />
+            <img className="h-auto max-w-full rounded-lg  hover:filter-none hover:scale-105 cursor-pointer transition-all duration-300 ease-in-out" src={img9} alt="" />
           </div>
         </div>
         <div className="grid gap-4">
           <div>
-            <img className="h-auto max-w-full rounded-lg grayscale hover:filter-none hover:scale-105 cursor-pointer transition-all duration-300 ease-in-out" src={img11} alt="" />
+            <img className="h-auto max-w-full rounded-lg  hover:filter-none hover:scale-105 cursor-pointer transition-all duration-300 ease-in-out" src={img7} alt="" />
           </div>
           <div>
-            <img className="h-auto max-w-full rounded-lg grayscale hover:filter-none hover:scale-105 cursor-pointer transition-all duration-300 ease-in-out" src={img12} alt="" />
+            <img className="h-auto max-w-full rounded-lg  hover:filter-none hover:scale-105 cursor-pointer transition-all duration-300 ease-in-out" src={img8} alt="" />
           </div>
           <div>
-            <img className="h-auto max-w-full rounded-lg grayscale hover:filter-none hover:scale-105 cursor-pointer transition-all duration-300 ease-in-out" src={img10} alt="" />
+            <img className="h-auto max-w-full rounded-lg  hover:filter-none hover:scale-105 cursor-pointer transition-all duration-300 ease-in-out" src={img6} alt="" />
+          </div>
+        </div>
+        <div className="grid gap-4">
+          <div>
+            <img className="h-auto max-w-full rounded-lg  hover:filter-none hover:scale-105 cursor-pointer transition-all duration-300 ease-in-out" src={img11} alt="" />
+          </div>
+          <div>
+            <img className="h-auto max-w-full rounded-lg  hover:filter-none hover:scale-105 cursor-pointer transition-all duration-300 ease-in-out" src={img12} alt="" />
+          </div>
+          <div>
+            <img className="h-auto max-w-full rounded-lg  hover:filter-none hover:scale-105 cursor-pointer transition-all duration-300 ease-in-out" src={img10} alt="" />
           </div>
         </div>
       </div>
