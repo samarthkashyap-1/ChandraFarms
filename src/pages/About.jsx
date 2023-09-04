@@ -1,6 +1,6 @@
 import React from 'react'
 import img3 from "../assets/chan2.png";
-
+import { Fade } from "react-awesome-reveal";
 function About() {
   return (
     <div>
@@ -18,7 +18,7 @@ function About() {
           </div>
         </header>
       </div>
-
+      <Fade triggerOnce delay={100}>
       <div className="my-20 min-h-screen w-3/4 mx-auto">
         <div className="container mx-auto">
           {/* <h1 className="text-4xl font-bold text-gray-800 mb-4">
@@ -74,6 +74,7 @@ function About() {
           </div>
         </div>
       </div>
+        </Fade>
     </div>
   );
   

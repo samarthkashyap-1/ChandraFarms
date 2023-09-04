@@ -6,10 +6,12 @@ import coop from "../assets/co op.png";
 import sang from "../assets/sang.png";
 
 import bday from "../assets/bday.png";
+import { Fade } from "react-awesome-reveal";
 
 function Services() {
   return (
     <div className="my-20">
+
       <div className="bg-gray-100 ">
         {/* Header Section */}
         <header className=" py-16">
@@ -29,6 +31,7 @@ function Services() {
       {/* Services Section */}
       <section className="container mx-auto mt-20 md:w-full w-3/4 ">
         <div className="flex flex-col gap-20 md:mx-10 ">
+        <Fade triggerOnce delay={100}> 
           {/* Service 1 */}
 
           <div className="flex sm:flex-col mx-0 gap-5 ">
@@ -120,6 +123,7 @@ function Services() {
               </div>
             </div>
           </div>
+        </Fade>
         </div>
       </section>
     </div>

@@ -87,6 +87,7 @@ function Navbar() {
             <Link to="home" smooth={true} duration={500}>
               {" "}
               <a
+                onClick={closeMenu}
                 href=""
                 className="hover:text-[#ffcc7b]  my-auto transition-colors duration-300 ease-in-out"
               >
@@ -96,6 +97,7 @@ function Navbar() {
 
             <Link to="services" smooth={true} duration={500}>
               <a
+                onClick={closeMenu}
                 href=""
                 className="hover:text-[#ffcc7b] my-auto  transition-colors duration-300 ease-in-out"
               >
@@ -104,33 +106,33 @@ function Navbar() {
             </Link>
 
             <Link to="gallery" smooth={true} duration={500}>
-
-            <a
-              href=""
-              className="hover:text-[#ffcc7b] my-auto  transition-colors duration-300 ease-in-out"
-            >
-              <li>Gallery</li>
-            </a>
+              <a
+                onClick={closeMenu}
+                href=""
+                className="hover:text-[#ffcc7b] my-auto  transition-colors duration-300 ease-in-out"
+              >
+                <li>Gallery</li>
+              </a>
             </Link>
 
             <Link to="about" smooth={true} duration={500}>
-
-            <a
-              href=""
-              className="hover:text-[#ffcc7b] my-auto  transition-colors duration-300 ease-in-out"
-            >
-              <li>About Us</li>
-            </a>
+              <a
+                onClick={closeMenu}
+                href=""
+                className="hover:text-[#ffcc7b] my-auto  transition-colors duration-300 ease-in-out"
+              >
+                <li>About Us</li>
+              </a>
             </Link>
-            
-            <Link to="contact" smooth={true} duration={500}>
 
-            <a
-              href=""
-              className="hover:text-[#ffcc7b] my-auto  transition-colors duration-300 ease-in-out"
-            >
-              <li>Contact Us</li>
-            </a>
+            <Link to="contact" smooth={true} duration={500}>
+              <a
+                onClick={closeMenu}
+                href=""
+                className="hover:text-[#ffcc7b] my-auto  transition-colors duration-300 ease-in-out"
+              >
+                <li>Contact Us</li>
+              </a>
             </Link>
           </ul>
         </div>
