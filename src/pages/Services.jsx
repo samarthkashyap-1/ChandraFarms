@@ -9,8 +9,8 @@ import bday from "../assets/bday.png";
 
 function Services() {
   return (
-    <>
-      <div className="bg-gray-100">
+    <div className="my-20">
+      <div className="bg-gray-100 ">
         {/* Header Section */}
         <header className=" py-16">
           <div className="container mx-auto text-center">
@@ -27,7 +27,7 @@ function Services() {
         </header>
       </div>
       {/* Services Section */}
-      <section className="container mx-auto mt-10 md:w-full w-3/4 mb-20">
+      <section className="container mx-auto mt-20 md:w-full w-3/4 ">
         <div className="flex flex-col gap-20 md:mx-10 ">
           {/* Service 1 */}
 
@@ -122,7 +122,7 @@ function Services() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
 

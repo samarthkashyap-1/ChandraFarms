@@ -5,6 +5,8 @@ import {Routes, Route } from "react-router-dom";
 import image from "./assets/back-1.jpg"
 import logo from "./assets/logo.png"
 import Services from "./pages/Services";
+import Gallery from "./pages/Gallery";
+import About from "./pages/About";
 
 function App() {
   const backgroundImageUrl = image;
@@ -12,7 +14,8 @@ function App() {
     <div className="h-screen w-screen overflow-x-hidden">
       <Home/>
       <Services/>
-
+      <Gallery/>
+      <About/>
       <footer className="mt-auto">
         <Footer />
       </footer>

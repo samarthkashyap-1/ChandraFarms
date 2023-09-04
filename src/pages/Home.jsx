@@ -10,7 +10,7 @@ function Home() {
   return (
     <div className="w-screen">
       <header
-        className="bg-center bg-cover bg-no-repeat h-screen"
+        className="bg-center bg-cover bg-fixed bg-no-repeat h-screen"
         style={{
           backgroundImage: `url(${backgroundImageUrl})`,
         }}
