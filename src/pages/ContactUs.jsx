@@ -1,11 +1,55 @@
 import React from 'react'
 import { Fade } from 'react-awesome-reveal';
+import { useState } from 'react';
+import axios from 'axios';
+
+
+ import { ToastContainer, toast } from "react-toastify";
+ import "react-toastify/dist/ReactToastify.css";
 
 function ContactUs() {
+  const notify = () => toast("Wow so easy!");
+    const [name, setname] = useState('')
+    const [email, setemail] = useState('')
+    const [phone, setphone] = useState('')
+    const [date, setdate] = useState('')
+    const getdata = (e) => {
+        e.preventDefault()
+       
+        const data = {
+            Name: name,
+            Email: email,
+            Phone: phone,
+            Date: date
+        }
+        console.log(data)
+        axios
+          .post(
+            "https://sheet.best/api/sheets/1ba9bd7f-0e4c-41f5-884f-ea0bb990018c",
+            data
+          )
+          .then((res) => {
+            console.log(res);
+            toast.success("We will contact you soon");
+            
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            toast.error("There is an error while submitting");
+          });
+
+          setdate('')
+          setemail('')
+          setname('')
+          setphone('')
+
+    }
 
   return (
     <div>
+      <ToastContainer position= "top-center"/>
       <div className="bg-gray-100">
+       
         {/* Header Section */}
         <header className=" py-16">
           <div className="container mx-auto text-center">
@@ -46,17 +90,20 @@ function ContactUs() {
           {/* Right side with contact information */}
           <div className="w-1/2 p-6 md:w-full">
             <h1 className="text-3xl font-bold mb-4">Contact Us</h1>
-            <form action="">
+            <form action="" onSubmit={getdata}>
               <div className="mb-4">
                 <label className="block font-bold mb-2" htmlFor="name">
                   Name:
                 </label>
                 <input
+                  required
                   className="w-full border rounded py-2 px-3"
                   type="text"
                   id="name"
                   name="name"
+                  onChange={(e) => setname(e.target.value)}
                   placeholder="Your Name"
+                  value={name}
                 />
               </div>
               <div className="mb-4">
@@ -68,6 +115,9 @@ function ContactUs() {
                   type="date"
                   id="bookingDate"
                   name="bookingDate"
+                  onChange={(e) => setdate(e.target.value)}
+                  placeholder="Booking Date"
+                  value={date}
                 />
               </div>
               <div className="mb-4">
@@ -75,11 +125,15 @@ function ContactUs() {
                   Phone No:
                 </label>
                 <input
+                  required
                   className="w-full border rounded py-2 px-3"
                   type="tel"
                   id="phone"
                   name="phone"
                   placeholder="Phone Number"
+                  onChange={(e) => setphone(e.target.value)}
+
+                  value={phone}
                 />
               </div>
               <div className="mb-4">
@@ -87,19 +141,23 @@ function ContactUs() {
                   Email:
                 </label>
                 <input
+                  required
                   className="w-full border rounded py-2 px-3"
                   type="email"
                   id="email"
                   name="email"
                   placeholder="Email Address"
+                  onChange={(e) => setemail(e.target.value)}
+                  value={email}
                 />
               </div>
-              <button
-                className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
-                type="button"
-              >
-                Submit
-              </button>
+              <div className="mb-4">
+                <input
+                  type="submit"
+                  value="Submit"
+                  className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded cursor-pointer transition-colors duration-300 ease-in-out"
+                />
+              </div>
             </form>
           </div>
         </div>

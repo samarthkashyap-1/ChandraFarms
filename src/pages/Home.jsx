@@ -24,7 +24,7 @@ function Home() {
      // Show/hide the button based on scroll position
      const handleScroll = () => {
        if (window.scrollY > 100) {
-         console.log("true");
+         
          setIsVisible(true);
        } else {
          setIsVisible(false);

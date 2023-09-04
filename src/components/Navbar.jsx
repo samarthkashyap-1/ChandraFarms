@@ -18,11 +18,11 @@ function Navbar() {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-    console.log(isOpen)
+    
   };
   const closeMenu = () => {
     setIsOpen(false);
-    console.log(isOpen);
+    
   };
   return (
     <>
