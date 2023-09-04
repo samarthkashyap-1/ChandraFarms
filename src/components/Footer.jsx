@@ -19,12 +19,10 @@ function Footer() {
   return (
     <div className="bg-black text-white py-10 ">
       <div className=" flex justify-evenly md:flex-col md:items-start md:gap-10 ">
-
         <Link to="home" smooth={true} duration={500}>
-          
-        <div className="w-40 cursor-pointer my-auto md:mx-auto">
-          <img src={logo} alt="" />
-        </div>
+          <div className="w-40 cursor-pointer my-auto md:mx-auto">
+            <img src={logo} alt="" />
+          </div>
         </Link>
 
         <div className="md:ml-5">
@@ -35,23 +33,19 @@ function Footer() {
             </Link>
 
             <Link to="services" smooth={true} duration={500}>
-            <p className=" cursor-pointer hover:text-[#ffcc7b]">Services</p>
+              <p className=" cursor-pointer hover:text-[#ffcc7b]">Services</p>
             </Link>
 
             <Link to="gallery" smooth={true} duration={500}>
-
-            <p className=" cursor-pointer hover:text-[#ffcc7b]">Gallery</p>
+              <p className=" cursor-pointer hover:text-[#ffcc7b]">Gallery</p>
             </Link>
 
             <Link to="about" smooth={true} duration={500}>
-
-            <p className=" cursor-pointer hover:text-[#ffcc7b]">About Us</p>
+              <p className=" cursor-pointer hover:text-[#ffcc7b]">About Us</p>
             </Link>
 
             <Link to="contact" smooth={true} duration={500}>
-
-
-            <p className=" cursor-pointer hover:text-[#ffcc7b]">Contact Us</p>
+              <p className=" cursor-pointer hover:text-[#ffcc7b]">Contact Us</p>
             </Link>
           </div>
         </div>
@@ -79,14 +73,22 @@ function Footer() {
                   farmschandra@gmail.com
                 </a>
               </div>
-              <div className=" flex">
+              <div className=" flex ">
                 <img className="scale-50 w-12" src={call} alt="" />
-                <a
-                  href="tel:+916389895959"
-                  className="text-center my-auto hover:text-[#ffcc7b]  transition-colors duration-300 ease-in-out"
-                >
-                  +91 6389895959
-                </a>
+                <div className='flex gap-2'>
+                  <a
+                    href="tel:+916389895959"
+                    className="text-center my-auto hover:text-[#ffcc7b]  transition-colors duration-300 ease-in-out"
+                  >
+                    +91 6389895959
+                  </a>
+                  <a
+                    href="tel:+917007505863"
+                    className="text-center my-auto hover:text-[#ffcc7b]  transition-colors duration-300 ease-in-out"
+                  >
+                    +91 7007505863
+                  </a>
+                </div>
               </div>
             </div>
           </div>

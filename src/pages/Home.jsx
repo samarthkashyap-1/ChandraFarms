@@ -104,12 +104,20 @@ function Home() {
                 </div>
                 <div className=" flex w-fit ">
                   <img className="scale-50 w-12" src={call} alt="" />
+                    <div className='flex gap-2'>
                   <a
                     href="tel:+916389895959"
                     className="text-center my-auto hover:text-[#ffcc7b]  transition-colors duration-300 ease-in-out"
                   >
                     +91 6389895959
                   </a>
+                  <a
+                    href="tel:+917007505863"
+                    className="text-center my-auto hover:text-[#ffcc7b]  transition-colors duration-300 ease-in-out"
+                  >
+                    +91 7007505863
+                  </a>
+                  </div>
                 </div>
               </div>
             </div>

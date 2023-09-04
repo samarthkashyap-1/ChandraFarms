@@ -44,7 +44,7 @@ function App() {
         </>
       ) : (
         <>
-          <div className="absolute right-10 top-10 z-10 md:hidden">
+          <div className="fixed right-10 top-10 z-10 md:hidden">
             <div className="flex">
               <a
                 href="https://www.facebook.com/profile.php?id=61550657502094"
