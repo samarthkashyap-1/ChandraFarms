@@ -37,7 +37,7 @@ function Services() {
           <div className="flex sm:flex-col mx-0 gap-5 ">
             <div className="w-1/2 sm:w-full">
               <div>
-                <img loading="lazy" src={wed} className="rounded-lg shadow-lg " alt="" />
+                <img loading="lazy" src={wed} className="rounded-lg shadow-xl hover:scale-105 cursor-pointer transition-all duration-300 ease-in-out " alt="" />
               </div>
             </div>
             <div className="w-1/2 sm:w-full">
@@ -59,7 +59,7 @@ function Services() {
           <div className="flex sm:flex-col mx-0 gap-5 ">
             <div className="flex flex-row-reverse sm:flex-col gap-5">
               <div className="w-1/2 sm:w-full">
-                <img loading="lazy" src={coop} className="rounded-lg shadow-lg" alt="" />
+                <img loading="lazy" src={coop} className="rounded-lg shadow-xl hover:scale-105 cursor-pointer transition-all duration-300 ease-in-out" alt="" />
               </div>
               <div className="w-1/2 sm:w-full">
                 <h1 className="text-2xl font-semibold text-center text-[#ffcc7b] mt-4">
@@ -81,7 +81,7 @@ function Services() {
           <div className="flex sm:flex-col mx-0 gap-5 ">
             <div className="w-1/2 sm:w-full">
               <div>
-                <img loading="lazy" src={sang} className="rounded-lg shadow-lg" alt="" />
+                <img loading="lazy" src={sang} className="rounded-lg shadow-xl hover:scale-105 cursor-pointer transition-all duration-300 ease-in-out" alt="" />
               </div>
             </div>
             <div className="w-1/2 sm:w-full">
@@ -104,7 +104,7 @@ function Services() {
           <div className="flex sm:flex-col mx-0 gap-5 ">
             <div className="flex flex-row-reverse sm:flex-col gap-5">
               <div className="w-1/2 sm:w-full">
-                <img loading="lazy" src={bday} className="rounded-lg shadow-lg" alt="" />
+                <img loading="lazy" src={bday} className="rounded-lg shadow-xl hover:scale-105 cursor-pointer transition-all duration-300 ease-in-out" alt="" />
               </div>
               <div className="w-1/2 sm:w-full">
                 <h1 className="text-2xl font-bold mt-4 text-[#ffcc7b] text-center">

@@ -24,9 +24,9 @@ function About() {
          
 
           <div className="mt-6 grid grid-cols-2 md:grid-cols-1 gap-8">
-            <div className="relative rounded-xl shadow-2xl overflow-hidden">
-              <img loading='lazy' src={img3} alt="Chandra Farms" className=" h-full " />
-              <p className="absolute inset-0 flex items-center  justify-center text-white text-xl font-bold bg-black bg-opacity-40">
+            <div className="relative rounded-xl shadow-2xl overflow-hidden group">
+              <img loading='lazy' src={img3} alt="Chandra Farms" className=" h-full  " />
+              <p className="absolute inset-0 flex items-center group-hover:opacity-0 cursor-pointer transition-all duration-300 ease-in-out  justify-center text-white text-xl font-bold bg-black bg-opacity-40">
                 Our Beautiful Farm
               </p>
             </div>
