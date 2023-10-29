@@ -19,6 +19,7 @@ import { Link } from 'react-scroll';
 
 function Home() {
     
+const [bg, setBg] = useState(1);
 
      const [isVisible, setIsVisible] = useState(false);
 
@@ -41,15 +42,23 @@ function Home() {
      };
 
      //background change afetr 5 seconds
-      const [bg, setBg] = useState(1);
+      const imageUrls = [bg1, bg2, bg3, bg4, bg5, bg6];
+
       useEffect(() => {
         const interval = setInterval(() => {
-          setBg((bg) => bg + 1);
-        }
-        , 5000);
+          // Increment bg with wrapping (cycling) behavior
+          setBg((bg) => (bg % 6) + 1);
+        }, 5000);
+
         return () => clearInterval(interval);
-      }
-      , [bg]);
+      }, [bg]);
+
+      // Preload the next image
+      useEffect(() => {
+        const nextBg = (bg % 6) + 1;
+        const img = new Image();
+        img.src = imageUrls[nextBg - 1];
+      }, [bg]);
 
      // Add a scroll event listener
      useEffect(() => {
@@ -86,17 +95,7 @@ function Home() {
           className="bg-center bg-cover bg-fixed bg-no-repeat h-screen transition-all ease-in-out duration-1000"
           style={{
             backgroundImage: `url(
-              ${bg%6 === 1
-                ? bg1
-                : bg%6 === 2
-                ? bg2
-                : bg%6 === 3
-                ? bg3
-                : bg%6 === 4
-                ? bg4
-                : bg%6 === 5
-                ? bg5
-                : bg6}
+              ${imageUrls[bg - 1]}
             )`,
           }}
         >
@@ -109,11 +108,11 @@ function Home() {
               <p className="mx-auto w-fit p-2  text-white font-bold text-6xl sm:text-4xl text-center">
                 Let Us Make Your Events Perfect
               </p>
-                <button className="w-fit mx-auto sm:mt-20 text-white rounded-xl border sm:p-2 sm:text-lg text-xl bg-[#ffcc7b]  hover:bg-opacity-90 transition-colors duration-300 ease-in-out h-fit py-3 font-semibold px-4 mt-10">
-              <Link to="contact" smooth={true} duration={500}>
+              <button className="w-fit mx-auto sm:mt-20 text-white rounded-xl border sm:p-2 sm:text-lg text-xl bg-[#ffcc7b]  hover:bg-opacity-90 transition-colors duration-300 ease-in-out h-fit py-3 font-semibold px-4 mt-10">
+                <Link to="contact" smooth={true} duration={500}>
                   Contact Us
-              </Link>
-                </button>
+                </Link>
+              </button>
               <div className="flex bg-black bg-opacity-60 text-white gap-5 justify-around mt-10 opacity-80 sm:hidden">
                 <div className="flex w-fit ">
                   <img className="scale-50 w-12" src={location} alt="" />
@@ -136,19 +135,19 @@ function Home() {
                 </div>
                 <div className=" flex w-fit ">
                   <img className="scale-50 w-12" src={call} alt="" />
-                    <div className='flex gap-2'>
-                  <a
-                    href="tel:+916389895959"
-                    className="text-center my-auto hover:text-[#ffcc7b]  transition-colors duration-300 ease-in-out"
-                  >
-                    +91 6389895959
-                  </a>
-                  <a
-                    href="tel:+917007505863"
-                    className="text-center my-auto hover:text-[#ffcc7b]  transition-colors duration-300 ease-in-out"
-                  >
-                    +91 7007505863
-                  </a>
+                  <div className="flex gap-2">
+                    <a
+                      href="tel:+916389895959"
+                      className="text-center my-auto hover:text-[#ffcc7b]  transition-colors duration-300 ease-in-out"
+                    >
+                      +91 6389895959
+                    </a>
+                    <a
+                      href="tel:+917007505863"
+                      className="text-center my-auto hover:text-[#ffcc7b]  transition-colors duration-300 ease-in-out"
+                    >
+                      +91 7007505863
+                    </a>
                   </div>
                 </div>
               </div>
