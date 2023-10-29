@@ -12,9 +12,7 @@ import insta from "./assets/insta.png";
 import Lottie from "lottie-react";
 import loaderr from "./assets/loader2.json";
 import {
-  
   scrollSpy,
-
 } from "react-scroll";
 
 

@@ -1,6 +1,15 @@
 import React from 'react'
 import { useState, useEffect } from "react";
-import image from "../assets/back-1.jpg";
+
+
+import bg1 from "../assets/bg1.jpg";
+import bg2 from "../assets/bg2.jpg";
+import bg3 from "../assets/bg3.jpg";
+import bg4 from "../assets/bg4.jpg";  
+import bg5 from "../assets/bg5.jpg";
+import bg6 from "../assets/bg6.jpg";
+
+
 import call from "../assets/call.png";
 import location from "../assets/location.png";
 import mail from "../assets/mail.png";
@@ -9,7 +18,7 @@ import { Fade } from "react-awesome-reveal";
 import { Link } from 'react-scroll';
 
 function Home() {
-    const backgroundImageUrl = image;
+    
 
      const [isVisible, setIsVisible] = useState(false);
 
@@ -30,6 +39,17 @@ function Home() {
          setIsVisible(false);
        }
      };
+
+     //background change afetr 5 seconds
+      const [bg, setBg] = useState(1);
+      useEffect(() => {
+        const interval = setInterval(() => {
+          setBg((bg) => bg + 1);
+        }
+        , 5000);
+        return () => clearInterval(interval);
+      }
+      , [bg]);
 
      // Add a scroll event listener
      useEffect(() => {
@@ -63,12 +83,24 @@ function Home() {
       </button>
       <Fade triggerOnce delay={100}>
         <header
-          className="bg-center bg-cover bg-fixed bg-no-repeat h-screen"
+          className="bg-center bg-cover bg-fixed bg-no-repeat h-screen transition-all ease-in-out duration-1000"
           style={{
-            backgroundImage: `url(${backgroundImageUrl})`,
+            backgroundImage: `url(
+              ${bg%6 === 1
+                ? bg1
+                : bg%6 === 2
+                ? bg2
+                : bg%6 === 3
+                ? bg3
+                : bg%6 === 4
+                ? bg4
+                : bg%6 === 5
+                ? bg5
+                : bg6}
+            )`,
           }}
         >
-          <div className="bg-black h-full bg-opacity-40 ">
+          <div className=" h-full backdrop-brightness-50 ">
             <Navbar />
             <div className="mt-24 flex flex-col gap-10">
               <p className="border-y-4 mx-auto w-fit py-4 text-white font-bold text-4xl text-center sm:text-2xl">

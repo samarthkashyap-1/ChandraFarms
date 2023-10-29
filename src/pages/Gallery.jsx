@@ -31,7 +31,7 @@ function Gallery() {
         </header>
       </div>
 
-      <div className="grid grid-cols-4 md:grid-cols-2 gap-4 mx-auto my-20 w-3/4 md:w-[90%]">
+      <div className="grid grid-cols-4 md:grid-cols-2 gap-4 mx-auto my-20  w-3/4 md:w-[90%]">
         <Fade triggerOnce delay={100}>
 
       
