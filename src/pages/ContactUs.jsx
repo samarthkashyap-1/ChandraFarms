@@ -1,55 +1,48 @@
-import React from 'react'
-import { Fade } from 'react-awesome-reveal';
-import { useState } from 'react';
-import axios from 'axios';
+import React from "react";
+import { Fade } from "react-awesome-reveal";
+import { useState } from "react";
+import axios from "axios";
 
-
- import { ToastContainer, toast } from "react-toastify";
- import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { db } from "../config/firebase";
+import { collection, addDoc } from "firebase/firestore";
 
 function ContactUs() {
-  const notify = () => toast("Wow so easy!");
-    const [name, setname] = useState('')
-    const [email, setemail] = useState('')
-    const [phone, setphone] = useState('')
-    const [date, setdate] = useState('')
-    const getdata = (e) => {
-        e.preventDefault()
-       
-        const data = {
-            Name: name,
-            Email: email,
-            Phone: phone,
-            Date: date
-        }
-        console.log(data)
-        axios
-          .post(
-            "https://sheet.best/api/sheets/1ba9bd7f-0e4c-41f5-884f-ea0bb990018c",
-            data
-          )
-          .then((res) => {
-            console.log(res);
-            toast.success("We will contact you soon");
-            
-          })
-          .catch((error) => {
-            console.error("Error:", error);
-            toast.error("There is an error while submitting");
-          });
+  const contactref = collection(db, "ContactUs");
+  const [name, setname] = useState("");
+  const [email, setemail] = useState("");
+  const [phone, setphone] = useState("");
+  const [date, setdate] = useState("");
+  const getdata = async (e) => {
+    e.preventDefault();
 
-          setdate('')
-          setemail('')
-          setname('')
-          setphone('')
+    const data = {
+      Name: name,
+      Email: email,
+      Phone: phone,
+      Date: date,
+    };
+    // console.log(data)
+    try {
+      // console.log("try");
+      await addDoc(contactref, data);
+      console.log("Document written with ID: ");
 
+      toast.success("We'll get back to you soon!");
+      setdate("");
+      setemail("");
+      setname("");
+      setphone("");
+    } catch (error) {
+      toast.error("Something went wrong!");
     }
+  };
 
   return (
     <div>
-      <ToastContainer position= "top-center"/>
+      <ToastContainer position="top-center" />
       <div className="bg-gray-100">
-       
         {/* Header Section */}
         <header className=" py-16">
           <div className="container mx-auto text-center">
@@ -132,7 +125,6 @@ function ContactUs() {
                   name="phone"
                   placeholder="Phone Number"
                   onChange={(e) => setphone(e.target.value)}
-
                   value={phone}
                 />
               </div>
@@ -166,4 +158,4 @@ function ContactUs() {
   );
 }
 
-export default ContactUs
+export default ContactUs;
