@@ -12,7 +12,7 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_REACT_APP_APPID,
   measurementId: import.meta.env.VITE_REACT_MEASUREID,
 };
-// console.log(firebaseConfig);
+console.log(firebaseConfig);
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);

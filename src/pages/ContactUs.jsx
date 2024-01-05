@@ -27,7 +27,7 @@ function ContactUs() {
     try {
       // console.log("try");
       await addDoc(contactref, data);
-      console.log("Document written with ID: ");
+      // console.log("Document written with ID: ");
 
       toast.success("We'll get back to you soon!");
       setdate("");
